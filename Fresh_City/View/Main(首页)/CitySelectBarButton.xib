@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tre-ns-r27" customClass="CitySelectBarButton" customModule="Fresh_City" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="public_nav_titlebar_triangle_8x4_" translatesAutoresizingMaskIntoConstraints="NO" id="BY2-IY-BsD" userLabel="下拉图标">
+                    <rect key="frame" x="65" y="17.5" width="16" height="9"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="QrB-ZB-gUW"/>
+                        <constraint firstAttribute="height" constant="9" id="caa-DG-SRf"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="su0-f5-EdS">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="cityBtnClick:" destination="tre-ns-r27" eventType="touchUpInside" id="tEC-y3-05f"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="呼和浩特" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHb-9D-VMk">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="7l6-aH-WwN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="BY2-IY-BsD" firstAttribute="leading" secondItem="dHb-9D-VMk" secondAttribute="trailing" constant="5" id="Bz4-VL-eZo"/>
+                <constraint firstItem="su0-f5-EdS" firstAttribute="leading" secondItem="tre-ns-r27" secondAttribute="leading" id="Lef-f1-huS"/>
+                <constraint firstAttribute="bottom" secondItem="dHb-9D-VMk" secondAttribute="bottom" id="Sad-ue-ftu"/>
+                <constraint firstItem="BY2-IY-BsD" firstAttribute="centerY" secondItem="tre-ns-r27" secondAttribute="centerY" id="Xt7-0Q-kgS"/>
+                <constraint firstItem="su0-f5-EdS" firstAttribute="top" secondItem="tre-ns-r27" secondAttribute="top" id="eTD-kf-epX"/>
+                <constraint firstAttribute="bottom" secondItem="su0-f5-EdS" secondAttribute="bottom" id="k78-5n-npn"/>
+                <constraint firstItem="dHb-9D-VMk" firstAttribute="leading" secondItem="tre-ns-r27" secondAttribute="leading" id="kHF-Yv-PzD"/>
+                <constraint firstItem="dHb-9D-VMk" firstAttribute="top" secondItem="tre-ns-r27" secondAttribute="top" id="lLt-rC-lAW"/>
+                <constraint firstAttribute="trailing" secondItem="su0-f5-EdS" secondAttribute="trailing" id="r98-9N-Mhn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cityLabel" destination="dHb-9D-VMk" id="yCG-gi-nQn"/>
+            </connections>
+            <point key="canvasLocation" x="88" y="335"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="public_nav_titlebar_triangle_8x4_" width="8" height="4"/>
+    </resources>
+</document>
