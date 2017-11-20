@@ -39,7 +39,7 @@ class MainTitleBar: UIView {
     }
     override func layoutSubviews() {
         super.layoutSubviews()
-        selectView.frame.origin.y=self.bounds.height-5
+        selectView.frame.origin.y=self.bounds.height-4
         for  button in subviews {
             if button.isKind(of: UIButton.classForCoder()){
                 guard  let button1  =  button as? UIButton else{

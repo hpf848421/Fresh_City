@@ -2,6 +2,7 @@
 # platform :ios, '9.0'
 
 target 'Fresh_City' do
+  use_frameworks!
   pod 'AFNetworking', '~> 3.0'
 
 end

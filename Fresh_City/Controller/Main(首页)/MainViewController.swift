@@ -7,10 +7,11 @@
 //
 
 import UIKit
-
+private let mainTitleBarH :CGFloat = 44.0;
+private let jingxuanTableViewCell="jingxuanTableViewCell"
 class MainViewController: UIViewController {
-    lazy var tableView = UITableView(frame: CGRect(x: 0, y: 64+44, width: kScreenWidth, height: kScreenHeight-64-44-49))
-
+    lazy var tableView = UITableView(frame: CGRect(x: 0, y: 64.0, width: kScreenWidth, height: kScreenHeight - 64.0  - 49.0 - mainTitleBarH))
+    var titleBar :MainTitleBar?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,9 +54,18 @@ extension MainViewController{
         navigationController?.navigationBar.addSubview(searchBtn)
     }
     func setTable(){
-        view.addSubview(tableView)
-        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
-          tableView.delegate=self
+       
+        tableView.contentInset=UIEdgeInsetsMake(mainTitleBarH, 0, 0, 0)
+//        tableView.estimatedRowHeight=300
+//        tableView.bringSubview(toFront: titleBar)
+//        tableView.register(MainjingxuanTableViewCell.classForCoder(), forCellReuseIdentifier: "jingxuanTableViewCell")
+        tableView.register(UINib.init(nibName: "MainjingxuanTableViewCell", bundle: nil), forCellReuseIdentifier: "jingxuanTableViewCell")
+        tableView.delegate=self
+        tableView.dataSource=self
+         view.addSubview(tableView)
+        view.bringSubview(toFront: titleBar!)
+      
+        
     }
     @objc func searchBtnClick(){
         
@@ -65,21 +75,24 @@ extension MainViewController{
         guard let titlebar=Bundle.main.loadNibNamed("MainTitleBar", owner: self, options: nil) else {
          return
         }
-        let titleBar   = titlebar[0] as! MainTitleBar
-        titleBar.frame=CGRect(x: 0, y: 64, width: kScreenWidth, height: 44)
-        view.addSubview(titleBar)
-        titleBar.delegate=self
+        let titleBar1   = titlebar[0] as! MainTitleBar
+        titleBar1.frame=CGRect(x: 0, y: 64, width: kScreenWidth, height: 44)
+        view.addSubview(titleBar1)
+        titleBar1.delegate=self
+        titleBar = titleBar1
     }
 }
 extension MainViewController:UITableViewDelegate,UITableViewDataSource{
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let tabbleCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-     
+            let tabbleCell = tableView.dequeueReusableCell(withIdentifier: jingxuanTableViewCell, for: indexPath)
         return tabbleCell
     }
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300;
     }
 }
 extension MainViewController:MainTitleBarDelegate{

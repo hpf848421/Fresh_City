@@ -26,7 +26,11 @@
 		0E826A571FB401470046333B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E826A551FB401470046333B /* LaunchScreen.storyboard */; };
 		0E826A621FB401470046333B /* Fresh_CityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E826A611FB401470046333B /* Fresh_CityTests.swift */; };
 		0E826A6D1FB401470046333B /* Fresh_CityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E826A6C1FB401470046333B /* Fresh_CityUITests.swift */; };
-		6604033E82BFE1D437F82025 /* libPods-Fresh_City.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED38B0C27CEAE962F820464 /* libPods-Fresh_City.a */; };
+		0EAC8E2F1FC2C05B00D31157 /* MainjingxuanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC8E2D1FC2C05B00D31157 /* MainjingxuanTableViewCell.swift */; };
+		0EAC8E301FC2C05B00D31157 /* MainjingxuanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EAC8E2E1FC2C05B00D31157 /* MainjingxuanTableViewCell.xib */; };
+		0EAC8E321FC2C81400D31157 /* MainjiangxuanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC8E311FC2C81400D31157 /* MainjiangxuanViewModel.swift */; };
+		0EAC8E331FC2C98800D31157 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAC8E341FC2C98800D31157 /* libAFNetworking.a */; };
+		ADD6EBB83985F78D656282E7 /* Pods_Fresh_City.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5C82F9FBEF35C95724CADF /* Pods_Fresh_City.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +76,12 @@
 		0E826A681FB401470046333B /* Fresh_CityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fresh_CityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E826A6C1FB401470046333B /* Fresh_CityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fresh_CityUITests.swift; sourceTree = "<group>"; };
 		0E826A6E1FB401470046333B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EAC8E2D1FC2C05B00D31157 /* MainjingxuanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainjingxuanTableViewCell.swift; sourceTree = "<group>"; };
+		0EAC8E2E1FC2C05B00D31157 /* MainjingxuanTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainjingxuanTableViewCell.xib; sourceTree = "<group>"; };
+		0EAC8E311FC2C81400D31157 /* MainjiangxuanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainjiangxuanViewModel.swift; sourceTree = "<group>"; };
+		0EAC8E341FC2C98800D31157 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B5C82F9FBEF35C95724CADF /* Pods_Fresh_City.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fresh_City.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		598615D0072C3A8CE8EEB72A /* Pods-Fresh_City.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fresh_City.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fresh_City/Pods-Fresh_City.release.xcconfig"; sourceTree = "<group>"; };
-		5ED38B0C27CEAE962F820464 /* libPods-Fresh_City.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fresh_City.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		606BF324584B702099F1EFD4 /* Pods-Fresh_City.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fresh_City.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fresh_City/Pods-Fresh_City.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6604033E82BFE1D437F82025 /* libPods-Fresh_City.a in Frameworks */,
+				0EAC8E331FC2C98800D31157 /* libAFNetworking.a in Frameworks */,
+				ADD6EBB83985F78D656282E7 /* Pods_Fresh_City.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +115,7 @@
 		0E18A34F1FB539D400BAF5A4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0EAC8E311FC2C81400D31157 /* MainjiangxuanViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -194,6 +204,8 @@
 				0E18A36C1FB5907300BAF5A4 /* MainTitleBar.swift */,
 				0E18A36E1FB5908000BAF5A4 /* MainTitleBar.xib */,
 				0E18A3701FB595C500BAF5A4 /* Home_tab_Button.swift */,
+				0EAC8E2D1FC2C05B00D31157 /* MainjingxuanTableViewCell.swift */,
+				0EAC8E2E1FC2C05B00D31157 /* MainjingxuanTableViewCell.xib */,
 			);
 			path = "Main(首页)";
 			sourceTree = "<group>";
@@ -259,7 +271,8 @@
 		2A475BEAD6EB36F307A389CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5ED38B0C27CEAE962F820464 /* libPods-Fresh_City.a */,
+				0EAC8E341FC2C98800D31157 /* libAFNetworking.a */,
+				3B5C82F9FBEF35C95724CADF /* Pods_Fresh_City.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -385,6 +398,7 @@
 			files = (
 				0E18A36F1FB5908000BAF5A4 /* MainTitleBar.xib in Resources */,
 				0E826A571FB401470046333B /* LaunchScreen.storyboard in Resources */,
+				0EAC8E301FC2C05B00D31157 /* MainjingxuanTableViewCell.xib in Resources */,
 				0E826A541FB401470046333B /* Assets.xcassets in Resources */,
 				0E18A36B1FB5497B00BAF5A4 /* CitySelectBarButton.xib in Resources */,
 				0E826A521FB401470046333B /* Main.storyboard in Resources */,
@@ -460,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EAC8E2F1FC2C05B00D31157 /* MainjingxuanTableViewCell.swift in Sources */,
 				0E18A3631FB53E1200BAF5A4 /* BaseNavigationController.swift in Sources */,
 				0E18A3611FB53DE300BAF5A4 /* BaseTabBarViewController.swift in Sources */,
 				0E18A3691FB5490900BAF5A4 /* CitySelectBarButton.swift in Sources */,
@@ -468,6 +483,7 @@
 				0E18A3661FB547BE00BAF5A4 /* Common.swift in Sources */,
 				0E826A4F1FB401470046333B /* ViewController.swift in Sources */,
 				0E826A4D1FB401470046333B /* AppDelegate.swift in Sources */,
+				0EAC8E321FC2C81400D31157 /* MainjiangxuanViewModel.swift in Sources */,
 				0E18A35F1FB53DC500BAF5A4 /* TangDianViewController.swift in Sources */,
 				0E18A36D1FB5907300BAF5A4 /* MainTitleBar.swift in Sources */,
 				0E18A3711FB595C500BAF5A4 /* Home_tab_Button.swift in Sources */,
